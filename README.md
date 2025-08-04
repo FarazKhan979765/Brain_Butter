@@ -58,7 +58,7 @@ Brain Butter/
 
 ## 🌐 Demo 
 Explore the full project here:
-[BrianButter](https://your-site-link.com)
+[BrianButter]( https://farazkhan979765.github.io/Brain_Butter/)
 
 ---
 
