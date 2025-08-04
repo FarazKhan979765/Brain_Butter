@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainButter - Spread Knowledge, Feed Curiosity</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-dOxO+aZ1prvO9MG4E9cTfBt7hvYUgpyy6Ht1FFUQ/vR+dBWQszUn0Zp5Iz+CrdqqyVd4pEDrZQvgt0zU5x3p0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particles Background -->
+    <div class="particles-bg" id="particles-bg"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" onclick="showPage('home')">🧈 BrainButter</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" onclick="showPage('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" onclick="showPage('about')">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="domain.html" onclick="showPage('Domain')">Domains</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html" onclick="showPage('blog')">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" onclick="showPage('contact')">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-3">
+                    <div class="search-container">
+                        <input type="text" class="form-control search-input" placeholder="Search articles..."
+                            id="searchInput">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <!-- <button class="theme-toggle" onclick="toggleTheme()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Homepage -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Spread Knowledge,<br>Feed Curiosity</h1>
+                    <p>Where complex ideas become deliciously digestible</p>
+                    <a href="blog.html">
+                        <button class="btn cta-btn" onclick="showPage('blog')">
+                            Start Exploring <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Post Page -->
+        <div id="blog-post" class="page" style="padding-top: 100px;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <article class="blog-post-content">
+                            <div class="text-center mb-5">
+                                <h1 class="display-4 fw-bold mb-3" id="post-title"> BrainButter – A Smooth Spread of
+                                    Knowledge for Curious Minds</h1>
+                                <div class="blog-meta mb-4">
+                                    <i class="fas fa-user me-2"></i>By BrainButter Team •
+                                    <i class="fas fa-calendar me-2 ms-3"></i>July 24, 2025 •
+                                    <i class="fas fa-clock me-2 ms-3"></i>5 min read
+                                </div>
+                                <img src="images/heroimg.jpg" alt="Hero Image" class="img-fluid rounded mb-4"
+                                    style="width: 850; height: 10; border: 2px solid black;">
+                            </div>
+
+                            <div class="post-content" id="post-content">
+                                <p class="lead">Welcome to 🧈BrainButter — your new favorite space where learning feels
+                                    less like a chore and more like a treat. In a world overflowing with information,
+                                    BrainButter exists to filter out the noise and deliver only what truly matters —
+                                    valuable, digestible, and inspiring content that fuels your brain and satisfies your
+                                    curiosity.</p>
+
+                                <p class="lead">Whether you're a student struggling with academic concepts, a beginner
+                                    stepping into
+                                    the world of coding, or simply someone who loves learning new things every day,
+                                    BrainButter is designed for you. We believe education shouldn't be boring or
+                                    stressful — it should be engaging, relatable, and fun. That's why BrainButter covers
+                                    a wide spectrum of topics — from web development tutorials and college exam tips to
+                                    mind-blowing facts, real success stories, and educational entertainment that keeps
+                                    your mind fresh and motivated.</p>
+
+                                <blockquote class="blockquote text-center my-5 p-4"
+                                    style="background: rgba(255, 215, 0, 0.1); border-left: 4px solid var(--butter-yellow); border-radius: 10px;">
+                                    <p class="mb-0 fst-italic">"An investment in knowledge always pays the best
+                                        interest. Education is not preparation for life; education is life itself, and
+                                        it never truly ends."</p>
+                                    <footer class="blockquote-footer mt-2">Benjamin Franklin</footer>
+                                </blockquote>
+
+                                <p class="lead">Our Success Stories segment highlights inspiring journeys — from global
+                                    icons like
+                                    A.P.J. Abdul Kalam to modern-day teens who built apps in their bedrooms and changed
+                                    their lives. These stories aren't just motivational — they're proof that you can do
+                                    it too, no matter where you start from.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer" style="margin-top: 20px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <h5 class="mb-3">🧈 BrainButter</h5>
+                        <p>Spreading knowledge, feeding curiosity. Join us on a journey through the most fascinating
+                            ideas shaping our world.</p>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <h6 class="mb-3">Quick Links</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" onclick="showPage('home')" class="text-light text-decoration-none">Home</a>
+                            </li>
+                            <li><a href="about.html" onclick="showPage('about')"
+                                    class="text-light text-decoration-none">About</a></li>
+                            <li><a href="domain.html" onclick="showPage('Domain')"
+                                    class="text-light text-decoration-none">Domains</a></li>
+                            <li><a href="blog.html" onclick="showPage('blog')"
+                                    class="text-light text-decoration-none">Blog</a></li>
+                            <li><a href="contact.html" onclick="showPage('contact')"
+                                    class="text-light text-decoration-none">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <h6 class="mb-3">Domains</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" onclick="filterBlogs('tech')"
+                                    class="text-light text-decoration-none">Technology</a></li>
+                            <li><a href="#" onclick="filterBlogs('science')"
+                                    class="text-light text-decoration-none">Science</a></li>
+                            <li><a href="#" onclick="filterBlogs('philosophy')"
+                                    class="text-light text-decoration-none">Philosophy</a></li>
+                            <li><a href="#" onclick="showPage('art')" class="text-light text-decoration-none">Arts</a>
+                            </li>
+                            <li><a href="domain.html" onclick="showPage('Domain')"
+                                    class="text-light text-decoration-none">And more...</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <h6 class="mb-3">Newsletter</h6>
+                        <p>Stay updated with our latest articles and insights.</p>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-warning">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2025 BrainButter. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                        <a href="#" class="text-light text-decoration-none me-3">Terms of Service</a>
+                        <a href="https://www.linkedin.com/in/mohd-faraz-khan-12a87a267/"
+                            class="text-light text-decoration-none" target="_blank">Desgined by Faraz Khan</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Floating Action Button -->
+        <a href="#" class="fab" onclick="scrollToTop()">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+        <script src="main.js"></script>
+</body>
+
+</html>

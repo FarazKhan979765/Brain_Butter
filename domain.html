@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainButter - Domains</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particles Background -->
+    <div class="particles-bg" id="particles-bg"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" onclick="showPage('home')">🧈 BrainButter</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" onclick="showPage('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" onclick="showPage('about')">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('Domain')">Domains</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html" onclick="showPage('blog')">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" onclick="showPage('contact')">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-3">
+                    <div class="search-container">
+                        <input type="text" class="form-control search-input" placeholder="Search articles..."
+                            id="searchInput">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <!-- <button class="theme-toggle" onclick="toggleTheme()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-3">Knowledge Domains</h2>
+                <p class="lead">Explore our carefully curated categories of mind-expanding content</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="category-card fade-in-up" onclick="filterBlogs('tech')">
+                        <div class="category-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h4>Technology</h4>
+                        <p>AI, quantum computing, gadgets and the digital frontier</p>
+                        <small class="text-muted">24 Articles</small>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="category-card fade-in-up" onclick="filterBlogs('science')">
+                        <div class="category-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h4>Science</h4>
+                        <p>From cosmos to consciousness, unraveling reality</p>
+                        <small class="text-muted">31 Articles</small>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="category-card fade-in-up" onclick="filterBlogs('art')">
+                        <div class="category-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>Arts & Creativity</h4>
+                        <p>Desgin, Creative expression across time and space</p>
+                        <small class="text-muted">18 Articles</small>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="category-card fade-in-up" onclick="filterBlogs('philosophy')">
+                        <div class="category-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Philosophy</h4>
+                        <p>Big questions, deeper thinking, profound insights</p>
+                        <small class="text-muted">15 Articles</small>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="category-card fade-in-up" onclick="filterBlogs('history')">
+                        <div class="category-icon">
+                            <i class="fa-jelly-fill fa-regular fa-hourglass"></i>
+                        </div>
+                        <h4>History</h4>
+                        <p>Ancient civilizations, world events, cultural evolution</p>
+                        <small class="text-muted">15 Articles</small>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="category-card fade-in-up" onclick="filterBlogs('philosophy')">
+                        <div class="category-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Psychology & Mind</h4>
+                        <p>Human behaviour, emotions, mental health, learning patterns</p>
+                        <small class="text-muted">15 Articles</small>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="category-card fade-in-up" onclick="filterBlogs('philosophy')">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+                        <h4>Literature & Language</h4>
+                        <p>Books, poetry, famous authors, grammer hacks</p>
+                        <small class="text-muted">15 Articles</small>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="category-card fade-in-up" onclick="filterBlogs('philosophy')">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h4>Maths & Logics</h4>
+                        <p>Puzzels, trick, cool theorems, beauty of numbers</p>
+                        <small class="text-muted">15 Articles</small>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="category-card fade-in-up" onclick="filterBlogs('philosophy')">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-person-running"></i>
+                        </div>
+                        <h4>Education & Careers</h4>
+                        <p>Big questions, deeper thinking, profound insights</p>
+                        <small class="text-muted">15 Articles</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">🧈 BrainButter</h5>
+                    <p>Spreading knowledge, feeding curiosity. Join us on a journey through the most fascinating
+                        ideas shaping our world.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" onclick="showPage('home')"
+                                class="text-light text-decoration-none">Home</a>
+                        </li>
+                        <li><a href="about.html" onclick="showPage('about')"
+                                class="text-light text-decoration-none">About</a></li>
+                        <li><a href="#" onclick="showPage('domains')"
+                                class="text-light text-decoration-none">Domains</a></li>
+                        <li><a href="blog.html" onclick="showPage('blog')"
+                                class="text-light text-decoration-none">Blog</a></li>
+                        <li><a href="contact.html" onclick="showPage('contact')"
+                                class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Domains</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" onclick="filterBlogs('tech')"
+                                class="text-light text-decoration-none">Technology</a></li>
+                        <li><a href="#" onclick="filterBlogs('science')"
+                                class="text-light text-decoration-none">Science</a></li>
+                        <li><a href="#" onclick="filterBlogs('philosophy')"
+                                class="text-light text-decoration-none">Philosophy</a></li>
+                        <li><a href="#" onclick="showPage('art')" 
+                                class="text-light text-decoration-none">Arts</a></li>
+                        <li><a href="#" onclick="showPage('Domain')"
+                                class="text-light text-decoration-none">And more...</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <h6 class="mb-3">Newsletter</h6>
+                    <p>Stay updated with our latest articles and insights.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-warning">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 BrainButter. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none me-3">Terms of Service</a>
+                    <a href="https://www.linkedin.com/in/mohd-faraz-khan-12a87a267/"
+                        class="text-light text-decoration-none" target="_blank">Desgined by Faraz Khan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <a href="#" class="fab" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

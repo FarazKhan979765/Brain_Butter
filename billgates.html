@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainButter - Bill Gates</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-dOxO+aZ1prvO9MG4E9cTfBt7hvYUgpyy6Ht1FFUQ/vR+dBWQszUn0Zp5Iz+CrdqqyVd4pEDrZQvgt0zU5x3p0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particles Background -->
+    <div class="particles-bg" id="particles-bg"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" onclick="showPage('home')">🧈 BrainButter</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" onclick="showPage('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" onclick="showPage('about')">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="domain.html" onclick="showPage('Domain')">Domains</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html" onclick="showPage('blog')">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" onclick="showPage('contact')">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-3">
+                    <div class="search-container">
+                        <input type="text" class="form-control search-input" placeholder="Search articles..."
+                            id="searchInput">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <!-- <button class="theme-toggle" onclick="toggleTheme()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post Page -->
+    <div id="blog-post" class="page" style="padding-top: 100px;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <article class="blog-post-content">
+                        <div class="text-center mb-5">
+                            <h1 class="display-4 fw-bold mb-3" id="post-title"> BrainButter – A Smooth Spread of
+                                Knowledge for Curious Minds</h1>
+                            <div class="blog-meta mb-4">
+                                <i class="fas fa-user me-2"></i>By BrainButter Team •
+                                <i class="fas fa-calendar me-2 ms-3"></i>July 24, 2025 •
+                                <i class="fas fa-clock me-2 ms-3"></i>5 min read
+                            </div>
+                            <img src="images/Bill_Gates_Bio.jpg" alt="Hero Image" class="img-fluid rounded mb-4"
+                                style="width: 850; height: 10; border: 2px solid black;">
+                        </div>
+
+                        <div class="post-content" id="post-content">
+                            <p class="lead">Bill Gates is perhaps the most well-known computer businessman in history.
+                                Not only did he start the most popular computing company of all time, Microsoft, but he
+                                also changed the way computers were made and marketed forever.
+
+                                His entrepreneurial spirit and business acumen are worth studying. So let's take a
+                                closer look at Bill Gates, his history, how he started his famous company and his
+                                current philanthropic endeavors.</p>
+
+                            <h3><b>Who is Bill Gates?</b></h3>
+                            <p class="lead">William Henry Gates III is best known as the founder and leader of
+                                Microsoft. He created the company in 1975 with his business partner Paul Allen. Though
+                                Paul Allen left the company some years later, William H. Gates remained with Microsoft
+                                for decades, heading it as the CEO until he left the position in 2000.</p>
+
+                            <p class="lead">Gates remained with Microsoft until 2008, then retired to take a position on
+                                the board of advisors. Since then, he has primarily acted as a business investor and
+                                charity leader, driving positive developments worldwide as the co-chair of the Bill &
+                                Melinda Gates Foundation and his involvement in other organizations.</p>
+
+                            <blockquote class="blockquote text-center my-5 p-4"
+                                style="background: rgba(255, 215, 0, 0.1); border-left: 4px solid var(--butter-yellow); border-radius: 10px;">
+                                <p class="mb-0 fst-italic">"Your most unhappy customers are your greatest source of
+                                    learning.” </p>
+                                <footer class="blockquote-footer mt-2">Bill Gates</footer>
+                            </blockquote>
+
+                            <img src="images/Bill_Gates_Bio2.jpg" alt="Hero Image" class="img-fluid rounded mb-4"
+                                style="width: 850; height: 10; border: 2px solid black;">
+
+                            <h3><b>Harvard and the Altair 8800</b></h3>
+                            <p class="lead">Though Bill Gates attended Harvard University, he didn't focus much on his
+                                studies. After reading a magazine article in December 1974 about the world's first
+                                microcomputer, the Altair 8800, Gates and Allen decided to pursue a business opportunity
+                                only they could see. <br> <br>
+
+
+                                They contacted the manufacturer of the Altair 880, MITS, based in Albuquerque, New
+                                Mexico. <br> <br>
+
+                                They told the president they had written a version of the computer language BASIC
+                                specifically for the microcomputer. Though this was a fabrication, the pair wanted to
+                                see if there was any interest in their "design."</p>
+
+                            <p class="lead">To the pair's surprise, the president of MITS said that he'd like to see the
+                                language. Scrambling, Gates and Allen started working 24/7 to create the promised
+                                language. <br> <br>
+
+                                They simulated the Altair 8800's capabilities on other computers since they had no
+                                microcomputer to work on or test. <br> <br>
+
+                                Still, Gates knew the opportunity was too good to pass up. When the pair showed the
+                                language to MITS, it was a resounding success. Inspired, Gates took a leave of absence
+                                from Harvard in November 1975, taking a job offer to work at MITS full-time.</p>
+
+                            <img src="images/Bill_Gates_Bio3.jpg" alt="Hero Image" class="img-fluid rounded mb-4"
+                                style="width: 850; height: 10; border: 2px solid black;">
+
+                            <h3><b>The formation of Microsoft</b></h3>
+                            <p class="lead">More importantly, Bill Gates and Paul Allen entered an official business
+                                partnership named "Micro-Soft." The two got the name for the company by combining the
+                                words microcomputer and software. <br> <br>
+
+                                However, by November 26, 1976, they'd changed the name to the more commonly recognized
+                                "Microsoft" version. Microsoft's first product was the Altair BASIC language, but Gates
+                                and Paul Allen continued to work on new products. Gates never returned to Harvard
+                                University, as his business was already massively successful. <br> <br>
+
+                                In the years to come, MITS would collapse, but Microsoft endured. July 1980 saw IBM
+                                approach Microsoft to write software for the upcoming personal computer, the IBM PC.
+                                <br> <br>
+
+                                Although Microsoft was initially contracted to write a BASIC interpreter for the IBM PC,
+                                the company was instead eventually hired to write the operating system for the upcoming
+                                computer when negotiations with Digital Research, another company, fell through.
+                            </p>
+
+                            <h3><b>What is Bill Gates' net worth?</b></h3>
+                            <p class="lead">At the time of this writing in spring of 2023,, Bill Gates' net worth is
+                                $107.9 billion. This combines his assets, stock options, portfolio values and estates.
+                                <br> <br>
+                                He is currently the fourth richest person in the world, behind Bernard Arnault, Elon
+                                Musk and Jeff Bezos.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="margin-top: 20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">🧈 BrainButter</h5>
+                    <p>Spreading knowledge, feeding curiosity. Join us on a journey through the most fascinating
+                        ideas shaping our world.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" onclick="showPage('home')" class="text-light text-decoration-none">Home</a>
+                        </li>
+                        <li><a href="about.html" onclick="showPage('about')"
+                                class="text-light text-decoration-none">About</a></li>
+                        <li><a href="domain.html" onclick="showPage('Domain')"
+                                class="text-light text-decoration-none">Domains</a></li>
+                        <li><a href="blog.html" onclick="showPage('blog')"
+                                class="text-light text-decoration-none">Blog</a></li>
+                        <li><a href="contact.html" onclick="showPage('contact')"
+                                class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Domains</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" onclick="filterBlogs('tech')"
+                                class="text-light text-decoration-none">Technology</a></li>
+                        <li><a href="#" onclick="filterBlogs('science')"
+                                class="text-light text-decoration-none">Science</a></li>
+                        <li><a href="#" onclick="filterBlogs('philosophy')"
+                                class="text-light text-decoration-none">Philosophy</a></li>
+                        <li><a href="#" onclick="showPage('art')" class="text-light text-decoration-none">Arts</a></li>
+                        <li><a href="domain.html" onclick="showPage('Domain')"
+                                class="text-light text-decoration-none">And more...</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <h6 class="mb-3">Newsletter</h6>
+                    <p>Stay updated with our latest articles and insights.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-warning">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 BrainButter. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none me-3">Terms of Service</a>
+                    <a href="https://www.linkedin.com/in/mohd-faraz-khan-12a87a267/"
+                        class="text-light text-decoration-none" target="_blank">Desgined by Faraz Khan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <a href="#" class="fab" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

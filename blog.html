@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainButter - Spread Knowledge, Feed Curiosity</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particles Background -->
+    <div class="particles-bg" id="particles-bg"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" onclick="showPage('home')">🧈 BrainButter</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" onclick="showPage('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" onclick="showPage('about')">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="domain.html" onclick="showPage('Domain')">Domains</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html" onclick="showPage('blog')">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" onclick="showPage('contact')">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-3">
+                    <div class="search-container">
+                        <input type="text" class="form-control search-input" placeholder="Search articles..."
+                            id="searchInput">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <!-- <button class="theme-toggle" onclick="toggleTheme()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Featured Articles Carousel -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-3">Success Stories</h2>
+                <p class="lead">Struggles, breakthroughs, triumphs. Stories that mirror your own journey.</p>
+            </div>
+
+            <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <!-- <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'><rect fill='%231a237e' width='800' height='400'/><circle cx='400' cy='200' r='100' fill='%23FFD700' opacity='0.8'/><text x='400' y='350' text-anchor='middle' fill='white' font-size='24'>Quantum Consciousness</text></svg>"
+                            class="d-block w-100" alt="Quantum Consciousness"> -->
+                        <img src="images/successstory1.jpg" alt="Success Stories" width="800" height="400"
+                            class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h3>Bill Gates</h3>
+                            <p>I choose a lazy person to do a hard job. Because a lazy person will find an easy way to
+                                do it.</p>
+                            <a href="billgates.html"><button class="btn btn-outline-light"
+                                    onclick="showArticle('quantum-mind')">Read
+                                    More</button></a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!-- <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'><rect fill='%23FFD700' width='800' height='400'/><rect fill='%231a237e' x='100' y='100' width='600' height='200' rx='20'/><text x='400' y='350' text-anchor='middle' fill='%231a237e' font-size='24'>Digital Renaissance</text></svg>"
+                            class="d-block w-100" alt="Digital Renaissance"> -->
+                        <img src="images/successstory2.jpg" alt="Success Stories" width="800" height="400"
+                            class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h3>Elon Musk</h3>
+                            <p>For me it was never about money, but solving problems for the future of humanity.</p>
+                            <button class="btn btn-outline-light" onclick="showArticle('digital-renaissance')">Read
+                                More</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!-- <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'><rect fill='%23000033' width='800' height='400'/><circle cx='200' cy='150' r='50' fill='%23FFD700'/><circle cx='400' cy='200' r='30' fill='%23ffffff'/><circle cx='600' cy='100' r='40' fill='%23FFD700' opacity='0.7'/><text x='400' y='350' text-anchor='middle' fill='white' font-size='24'>Cosmic Perspective</text></svg>"
+                            class="d-block w-100" alt="Cosmic Perspective"> -->
+                        <img src="images/successstory3.jpg" alt="Success Stories" width="800" height="400"
+                            class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h3>APJ Abdul Kalam</h3>
+                            <p>Dream is not that which you see while sleeping it is something that does not let you
+                                sleep.</p>
+                            <button class="btn btn-outline-light" onclick="showArticle('cosmic-perspective')">Read
+                                More</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="py-5" style="background: var(--butter-light);">
+        <div class="container text-center">
+            <h3 class="mb-4">Get Your Weekly Brain Food</h3>
+            <p class="mb-4">Join 10,000+ curious minds who never miss our latest insights</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn cta-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- Blog Listing Page -->
+    <div id="blog" class="page" style="padding-top: 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="display-5 fw-bold">Latest Articles</h2>
+                        <div class="filter-buttons">
+                            <button class="btn btn-outline-primary me-2 filter-btn active"
+                                onclick="filterBlogs('all')">All</button>
+                            <button class="btn btn-outline-primary me-2 filter-btn"
+                                onclick="filterBlogs('tech')">Tech</button>
+                            <button class="btn btn-outline-primary me-2 filter-btn"
+                                onclick="filterBlogs('science')">Science</button>
+                            <button class="btn btn-outline-primary me-2 filter-btn"
+                                onclick="filterBlogs('art')">Arts</button>
+                            <button class="btn btn-outline-primary filter-btn"
+                                onclick="filterBlogs('philosophy')">Philosophy</button>
+                        </div>
+                    </div>
+
+                    <div id="blog-container">
+                        <!-- Tech Articles -->
+                        <article class="blog-card blog-item" data-category="tech">
+                            <img src="images/AI.jpg" alt="AI Revolution" width="400" height="250" class="w-100">
+
+
+                            <div class="blog-card-body">
+                                <div class="blog-meta">
+                                    <i class="fas fa-microchip me-2"></i>Technology • 5 min read • July 24, 2025
+                                </div>
+                                <h4>The AI Revolution: How Machine Learning is Reshaping Reality</h4>
+                                <p>From self-driving cars to creative AI, explore how artificial intelligence is
+                                    fundamentally changing how we live, work, and think about intelligence itself.</p>
+                                <button class="btn btn-outline-primary" onclick="showArticle('ai-revolution')">Read
+                                    More</button>
+                            </div>
+                        </article>
+
+                        <article class="blog-card blog-item" data-category="tech">
+                            <img src="images/quantum_compters.jpg" alt="AI Revolution" width="400" height="250" class="w-100">
+                            <div class="blog-card-body">
+                                <div class="blog-meta">
+                                    <i class="fas fa-microchip me-2"></i>Technology • 8 min read • July 22, 2025
+                                </div>
+                                <h4>Quantum Computing: The Next Leap in Human Capability</h4>
+                                <p>Understanding the principles behind quantum computers and why they represent the most
+                                    significant technological breakthrough since the transistor.</p>
+                                <button class="btn btn-outline-primary" onclick="showArticle('quantum-computing')">Read
+                                    More</button>
+                            </div>
+                        </article>
+
+                        <!-- Science Articles -->
+                        <article class="blog-card blog-item" data-category="science">
+                            <img src="images/CRISPR.jpg" alt="AI Revolution" width="400" height="250" class="w-100">
+                            <div class="blog-card-body">
+                                <div class="blog-meta">
+                                    <i class="fas fa-atom me-2"></i>Science • 7 min read • July 20, 2025
+                                </div>
+                                <h4>CRISPR and the Future of Human Enhancement</h4>
+                                <p>Exploring the revolutionary gene-editing technology that's allowing us to rewrite the
+                                    code of life itself, and the ethical implications that follow.</p>
+                                <button class="btn btn-outline-primary" onclick="showArticle('crispr-future')">Read
+                                    More</button>
+                            </div>
+                        </article>
+
+                        <article class="blog-card blog-item" data-category="science">
+                            <img src="images/Black_Hole.jpg" alt="AI Revolution" width="400" height="250" class="w-100">
+                            <div class="blog-card-body">
+                                <div class="blog-meta">
+                                    <i class="fas fa-atom me-2"></i>Science • 6 min read • July 18, 2025
+                                </div>
+                                <h4>Inside Black Holes: The Universe's Most Mysterious Objects</h4>
+                                <p>Journey to the edge of space-time and discover what happens when gravity becomes so
+                                    strong that not even light can escape.</p>
+                                <button class="btn btn-outline-primary" onclick="showArticle('black-holes')">Read
+                                    More</button>
+                            </div>
+                        </article>
+
+                        <!-- Arts Articles -->
+                        <article class="blog-card blog-item" data-category="art">
+                            <img src="images/art.jpg" alt="AI Revolution" width="400" height="250" class="w-100">
+                            <div class="blog-card-body">
+                                <div class="blog-meta">
+                                    <i class="fas fa-palette me-2"></i>Arts • 5 min read • July 16, 2025
+                                </div>
+                                <h4>The Digital Canvas: NFTs and the Future of Art Ownership</h4>
+                                <p>How blockchain technology is revolutionizing the art world, creating new
+                                    possibilities for artists and collectors alike.</p>
+                                <button class="btn btn-outline-primary" onclick="showArticle('digital-canvas')">Read
+                                    More</button>
+                            </div>
+                        </article>
+
+                        <!-- Philosophy Articles -->
+                        <article class="blog-card blog-item" data-category="philosophy">
+                            <img src="images/Brain.jpg" alt="AI Revolution" width="400" height="250" class="w-100">
+                            <div class="blog-card-body">
+                                <div class="blog-meta">
+                                    <i class="fas fa-brain me-2"></i>Philosophy • 9 min read • July 14, 2025
+                                </div>
+                                <h4>The Hard Problem of Consciousness: Are We More Than Our Brains?</h4>
+                                <p>Diving deep into the mystery of subjective experience and what it means to be
+                                    consciously aware in a physical universe.</p>
+                                <button class="btn btn-outline-primary"
+                                    onclick="showArticle('consciousness-problem')">Read More</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="sidebar">
+                        <h5 class="mb-3">Recent Posts</h5>
+                        <div class="recent-post mb-3">
+                            <small class="text-muted">July 23, 2025</small>
+                            <h6><a href="#" onclick="showArticle('time-travel')">The Physics of Time Travel: Fact or
+                                    Fiction?</a></h6>
+                        </div>
+                        <div class="recent-post mb-3">
+                            <small class="text-muted">July 21, 2025</small>
+                            <h6><a href="#" onclick="showArticle('brain-computer')">Brain-Computer Interfaces: Reading
+                                    Minds with Technology</a></h6>
+                        </div>
+                        <div class="recent-post mb-4">
+                            <small class="text-muted">July 19, 2025</small>
+                            <h6><a href="#" onclick="showArticle('metaverse')">The Metaverse: Our Digital Future or
+                                    Dystopian Nightmare?</a></h6>
+                        </div>
+
+                        <h5 class="mb-3">Popular Tags</h5>
+                        <div class="tags-container">
+                            <span class="tag">#AI</span>
+                            <span class="tag">#Quantum</span>
+                            <span class="tag">#Consciousness</span>
+                            <span class="tag">#Future</span>
+                            <span class="tag">#Science</span>
+                            <span class="tag">#Technology</span>
+                            <span class="tag">#Philosophy</span>
+                            <span class="tag">#Innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">🧈 BrainButter</h5>
+                    <p>Spreading knowledge, feeding curiosity. Join us on a journey through the most fascinating ideas
+                        shaping our world.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" onclick="showPage('home')"
+                                class="text-light text-decoration-none">Home</a>
+                        </li>
+                        <li><a href="about.html" onclick="showPage('about')"
+                                class="text-light text-decoration-none">About</a></li>
+                        <li><a href="domain.html" onclick="showPage('Domain')"
+                                class="text-light text-decoration-none">Domains</a></li>
+                        <li><a href="#" onclick="showPage('blog')" class="text-light text-decoration-none">Blog</a></li>
+                        <li><a href="contact.html" onclick="showPage('contact')"
+                                class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Domains</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" onclick="filterBlogs('tech')"
+                                class="text-light text-decoration-none">Technology</a></li>
+                        <li><a href="#" onclick="filterBlogs('science')"
+                                class="text-light text-decoration-none">Science</a></li>
+                        <li><a href="#" onclick="filterBlogs('philosophy')"
+                                class="text-light text-decoration-none">Philosophy</a></li>
+                        <li><a href="#" onclick="showPage('art')" class="text-light text-decoration-none">Arts</a></li>
+                        <li><a href="domain.html" onclick="showPage('Domain')"
+                                class="text-light text-decoration-none">And more...</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <h6 class="mb-3">Newsletter</h6>
+                    <p>Stay updated with our latest articles and insights.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-warning">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 BrainButter. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none me-3">Terms of Service</a>
+                    <a href="https://www.linkedin.com/in/mohd-faraz-khan-12a87a267/"
+                        class="text-light text-decoration-none" target="_blank">Desgined by Faraz Khan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <a href="#" class="fab" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

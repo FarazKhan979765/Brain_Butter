@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainButter - Spread Knowledge, Feed Curiosity</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particles Background -->
+    <div class="particles-bg" id="particles-bg"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" onclick="showPage('home')">🧈 BrainButter</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" onclick="showPage('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" onclick="showPage('about')">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="domain.html" onclick="showPage('Domain')">Domains</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html" onclick="showPage('blog')">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" onclick="showPage('contact')">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-3">
+                    <div class="search-container">
+                        <input type="text" class="form-control search-input" placeholder="Search articles..."
+                            id="searchInput">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <!-- <button class="theme-toggle" onclick="toggleTheme()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <section class="about-hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="text-center mb-5">
+                        <h2 class="display-4 fw-bold text-white mb-3">About BrainButter</h2>
+                        <p class="lead text-white">BrainButter turns complex concepts into sticky, flavorful stories
+                            that educate</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 600'><rect fill='%23FFD700' width='500' height='600'/><ellipse cx='250' cy='200' rx='120' ry='140' fill='%231a237e' opacity='0.8'/><circle cx='220' cy='180' r='15' fill='white'/><circle cx='280' cy='180' r='15' fill='white'/><path d='M200 240 Q250 280 300 240' stroke='white' stroke-width='8' fill='none'/><rect x='150' y='350' width='200' height='200' fill='%231a237e' opacity='0.6' rx='20'/><text x='250' y='580' text-anchor='middle' fill='%231a237e' font-size='20'>Knowledge Seeker</text></svg>"
+                            class="img-fluid about-image" alt="About BrainButter">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="display-3 fw-bold text-white mb-4">BrainButter</h1>
+                        <p class="lead text-white mb-4">We're on a mission to make complex ideas deliciously digestible.
+                            BrainButter transforms dense academic concepts into engaging narratives that stick with you
+                            long after reading.</p>
+                        <p class="text-white mb-4">Founded in 2025 by a team of curious minds from diverse backgrounds –
+                            neuroscientists, technologists, philosophers, and storytellers – we believe that knowledge
+                            should be accessible, engaging, and transformative.</p>
+
+                        <div class="row mt-5">
+                            <div class="col-md-4">
+                                <div class="stats-counter">
+                                    <span class="counter-number" data-target="5000">0</span>
+                                    <small>Monthly Readers</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stats-counter">
+                                    <span class="counter-number" data-target="170">0</span>
+                                    <small>Articles Published</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stats-counter">
+                                    <span class="counter-number" data-target="10">0</span>
+                                    <small>Expert Contributors</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5" style="background: var(--butter-light);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="text-center">
+                            <i class="fas fa-lightbulb fa-3x text-primary mb-3"></i>
+                            <h4>Our Mission</h4>
+                            <p>To democratize knowledge by making complex ideas accessible and engaging for everyone,
+                                regardless of their background or expertise level.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="text-center">
+                            <i class="fas fa-rocket fa-3x text-primary mb-3"></i>
+                            <h4>Our Vision</h4>
+                            <p>A world where curiosity knows no bounds, where every question leads to discovery, and
+                                where learning is a lifelong adventure.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="text-center">
+                            <i class="fas fa-heart fa-3x text-primary mb-3"></i>
+                            <h4>Our Values</h4>
+                            <p>Intellectual honesty, creative storytelling, scientific rigor, and the belief that
+                                knowledge should be shared freely and joyfully.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">🧈 BrainButter</h5>
+                    <p>Spreading knowledge, feeding curiosity. Join us on a journey through the most fascinating
+                        ideas shaping our world.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" onclick="showPage('home')"
+                                class="text-light text-decoration-none">Home</a>
+                        </li>
+                        <li><a href="#" onclick="showPage('about')" class="text-light text-decoration-none">About</a>
+                        </li>
+                        <li><a href="domain.html" onclick="showPage('Domain')"
+                                class="text-light text-decoration-none">Domains</a></li>
+                        <li><a href="blog.html" onclick="showPage('blog')"
+                                class="text-light text-decoration-none">Blog</a></li>
+                        <li><a href="contact.html" onclick="showPage('contact')"
+                                class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Domains</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" onclick="filterBlogs('tech')"
+                                class="text-light text-decoration-none">Technology</a></li>
+                        <li><a href="#" onclick="filterBlogs('science')"
+                                class="text-light text-decoration-none">Science</a></li>
+                        <li><a href="#" onclick="filterBlogs('philosophy')"
+                                class="text-light text-decoration-none">Philosophy</a></li>
+                        <li><a href="#" onclick="showPage('art')" 
+                                class="text-light text-decoration-none">Arts</a></li>
+                        <li><a href="domain.html" onclick="showPage('Domain')"
+                                class="text-light text-decoration-none">And more...</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <h6 class="mb-3">Newsletter</h6>
+                    <p>Stay updated with our latest articles and insights.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-warning">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 BrainButter. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none me-3">Terms of Service</a>
+                    <a href="https://www.linkedin.com/in/mohd-faraz-khan-12a87a267/"
+                        class="text-light text-decoration-none" target="_blank">Desgined by Faraz Khan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <a href="#" class="fab" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
